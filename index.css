@@ -64,6 +64,7 @@ body {
     border: solid 3px gray;
     margin: 3px;
     width: 8vw;
+    min-width: 100px;
     display: inline-block;
     overflow: hidden;
 }
