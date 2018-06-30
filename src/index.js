@@ -26,14 +26,22 @@ document.getElementById("text").addEventListener("keyup", () => {
     let input = document.getElementById("text").value;
     let number = parseFloat(input.trim());
     let availableSpacers = spacers.getSpacers();
-
+    console.log("number is " + number);
     let result;
     if (input.trim().length > 0 && number !== NaN) {
-        result = calc.calcSpacers(Math.round(1000 * number), availableSpacers);
+        result = calc.dynamic(Math.round(1000 * number), availableSpacers);
 
-        for (let i = 0; i < result.length; i++) {
-            if (result[i].quantity > 0) {
-                document.getElementById("response").appendChild(spacers.displaySpacer(result[i]));
+        console.log("final result is " + result);
+        if (result == undefined) {
+            console.log("trying greedy method");
+            result = calc.greedy(Math.round(1000 * number), availableSpacers);
+        }
+
+        if (result != undefined) {
+            for (let i = 0; i < result.length; i++) {
+                if (result[i].quantity > 0) {
+                    document.getElementById("response").appendChild(spacers.displaySpacer(result[i]));
+                }
             }
         }
     }

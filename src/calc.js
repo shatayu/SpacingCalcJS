@@ -1,4 +1,6 @@
-export function calcSpacers(distance, spacers) {
+let _ = require("lodash");
+
+export function dynamic(distance, spacers) {
 	let table = [];
 	let lastSpacer = [];
 	let solutions = [];
@@ -23,6 +25,10 @@ export function calcSpacers(distance, spacers) {
 	}
 
 	let numSpacers = table[distance];
+	console.log("numSpacers is " + numSpacers);
+	if (numSpacers === 0 || numSpacers === Number.MAX_SAFE_INTEGER) {
+		return undefined;
+	}
 
 	// find which spacers were used
 	do {
@@ -41,3 +47,18 @@ export function calcSpacers(distance, spacers) {
 	return spacers;
 }
 
+export function greedy(distance, spacers) {
+	let sortedSpacers = _.sortBy(spacers, [function(o) {
+		return o.length;		
+	}]);
+
+	for (let i = sortedSpacers.length - 1; i >= 0; i--) {
+		while (sortedSpacers[i].length < distance) {
+			console.log("distance is " + distance);
+			distance -= sortedSpacers[i].length;
+			sortedSpacers[i].quantity++;
+		}
+	}
+
+	return sortedSpacers;
+}
