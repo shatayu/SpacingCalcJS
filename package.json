@@ -16,5 +16,9 @@
   },
   "dependencies": {
     "lodash": "^4.17.10"
+  },
+  "engines": {
+    "node": "v8.9.4",
+    "npm": "v5.6.0"
   }
 }
