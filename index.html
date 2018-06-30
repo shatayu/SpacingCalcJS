@@ -1,27 +1,29 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
-<head>
+<head id="head">
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Spacing Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" type="text/css" media="screen" href="index.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
-    <textarea id="text" placeholder="0.573 in, 0.219 cm"></textarea><br>
-    <input type="checkbox" id="s125" class="spacerOption">1/8" spacers</input><br />
-    <input type="checkbox" id="s250" class="spacerOption">1/4" spacers</input><br />
-    <input type="checkbox" id="s375" class="spacerOption">3/8" spacers</input><br />
-    <input type="checkbox" id="s500" class="spacerOption">1/2" spacers</input><br />
-    <input type="checkbox" id="s190" class="spacerOption">4.6mm spacers</input><br />
-    <input type="checkbox" id="s330" class="spacerOption">8mm spacers</input><br />
-    <input type="checkbox" id="s32" class="spacerOption">Steel Washer</input><br />
-    <input type="checkbox" id="s40" class="spacerOption">Teflon Washer</input><br />
-    <button id="submit">Submit</button>
-    <button id="checkall">Check all</button>
-    <button id="uncheckall">Uncheck all</button>
-
-    <div id="response"></div>
+    <div id="container">
+            <textarea id="text" placeholder="0.573 in, 0.219 cm"></textarea><br>
+            <input type="checkbox" id="s125" class="spacerOption" /><label for="s125">1/8" SPACERS</label>
+            <input type="checkbox" id="s250" class="spacerOption" /><label for="s250">1/4" SPACERS</label>
+            <input type="checkbox" id="s375" class="spacerOption" /><label for="s375">3/8" SPACERS</label>
+            <input type="checkbox" id="s500" class="spacerOption" /><label for="s500">1/2" SPACERS</label>
+            <input type="checkbox" id="s190" class="spacerOption" /><label for="s190">4.6MM SPACERS</label>
+            <input type="checkbox" id="s330" class="spacerOption" /><label for="s330">8MM SPACERS</label>
+            <input type="checkbox" id="s32" class="spacerOption" /><label for="s32">STEEL WASHERS</label>
+            <input type="checkbox" id="s40" class="spacerOption" /><label for="s40">TEFLON WASHERS</label><br />
+            <button id="checkall">CHECK ALL</button>
+            <button id="uncheckall">UNCHECK ALL</button>
+            <div id="response"></div>
+    </div>
+            
     <script src="dist/main.js"></script>
 </body>
 </html>
