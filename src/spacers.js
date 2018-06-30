@@ -43,3 +43,8 @@
 	return spacers;
 }
 
+export function displaySpacer(spacer) {
+	let element = document.createElement("div");
+	element.innerHTML = spacer.name + " (x" + spacer.quantity + ")";
+	return element;
+}

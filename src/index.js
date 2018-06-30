@@ -5,6 +5,12 @@ document.getElementById("submit").addEventListener("click", () => {
     let input = document.getElementById("text").value;
     let availableSpacers = spacers.getSpacers(); 
     let result = calc.calcSpacers(Math.round(1000 * parseFloat(input)), availableSpacers);
+
+    for (let i = 0; i < result.length; i++) {
+        if (result[i].quantity > 0) {
+            document.getElementById("response").appendChild(spacers.displaySpacer(result[i]));
+        }
+    }
 })
 
 document.getElementById("checkall").addEventListener("click", () => {

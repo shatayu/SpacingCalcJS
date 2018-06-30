@@ -38,5 +38,6 @@ export function calcSpacers(distance, spacers) {
 		spacers[solutions[i]].quantity++;
 	}
 	console.log(spacers);
+	return spacers;
 }
 
