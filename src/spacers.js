@@ -9,35 +9,35 @@
 	var spacers = [];
 
 	if (document.getElementById("s125").checked) {
-		spacers.push(new Spacer(125, "0.125 Spacer (Nylon)", "s125"));
+		spacers.push(new Spacer(125, "1/8\" SPACER", "s125"));
 	}
 
 	if (document.getElementById("s250").checked) {
-		spacers.push(new Spacer(250, "0.250 Spacer (Nylon)", "s250"));
+		spacers.push(new Spacer(250, "1/4\" SPACER", "s250"));
 	}
 
 	if (document.getElementById("s375").checked) {
-		spacers.push(new Spacer(375, "0.375 Spacer (Nylon)", "s375"));
+		spacers.push(new Spacer(375, "3/8\" SPACER", "s375"));
 	}
 
 	if (document.getElementById("s500").checked) {
-		spacers.push(new Spacer(500, "0.500 Spacer (Nylon)", "s500"));
+		spacers.push(new Spacer(500, "1/2\" SPACER", "s500"));
 	}
 
 	if (document.getElementById("s190").checked) {
-		spacers.push(new Spacer(190, "4.6mm Spacer", "s190"));
+		spacers.push(new Spacer(190, "4.6MM SPACER", "s190"));
 	}
 
 	if (document.getElementById("s330").checked) {
-		spacers.push(new Spacer(330, "8mm Spacer", "s330"));
+		spacers.push(new Spacer(330, "8MM SPACER", "s330"));
 	}
 
 	if (document.getElementById("s32").checked) {
-		spacers.push(new Spacer(32, "Steel Washer (0.032)", "s32"));
+		spacers.push(new Spacer(32, "STEEL WASHER", "s32"));
 	}
 
 	if (document.getElementById("s40").checked) {
-		spacers.push(new Spacer(40, "Teflon Washer (0.040)", "s40"));
+		spacers.push(new Spacer(40, "TEFLON WASHER", "s40"));
 	}
 
 	return spacers;

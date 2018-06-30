@@ -74,8 +74,8 @@ body {
 }
 
 .spacerOption + label:hover {
-    color: white;
-    border: solid 3px white;
+    color: rgb(86, 214, 253);
+    border: solid 3px rgb(86, 214, 253);
 }
 
 button {

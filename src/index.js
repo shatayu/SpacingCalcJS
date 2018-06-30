@@ -10,14 +10,6 @@ function checkAll() {
     }
 }
 
-// function uncheckAll() {
-//     let checkboxes = document.getElementsByClassName("spacerOption");
-
-//     for (let i = 0; i < checkboxes.length; i++) {
-//         checkboxes[i].checked = false;
-//     }
-// }
-
 checkAll();
 
 // handle input submission
@@ -38,11 +30,18 @@ document.getElementById("text").addEventListener("keyup", () => {
         }
 
         if (result != undefined) {
+            let coveredLength = 0;
+            let response = document.getElementById("response");
             for (let i = 0; i < result.length; i++) {
                 if (result[i].quantity > 0) {
-                    document.getElementById("response").appendChild(spacers.displaySpacer(result[i]));
+                    response.appendChild(spacers.displaySpacer(result[i]));
+                    coveredLength += result[i].length * result[i].quantity;
                 }
             }
+
+            let finalResult = document.createElement("span");
+            finalResult.innerHTML = "<br />The total distance covered is <strong>" + coveredLength/1000.0 + "</strong> inches.";
+            response.appendChild(finalResult);
         }
     }
 })

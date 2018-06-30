@@ -25,7 +25,6 @@ export function dynamic(distance, spacers) {
 	}
 
 	let numSpacers = table[distance];
-	console.log("numSpacers is " + numSpacers);
 	if (numSpacers === 0 || numSpacers === Number.MAX_SAFE_INTEGER) {
 		return undefined;
 	}
@@ -43,7 +42,6 @@ export function dynamic(distance, spacers) {
 		sumSpacers += spacers[solutions[i]].length;
 		spacers[solutions[i]].quantity++;
 	}
-	console.log(spacers);
 	return spacers;
 }
 
@@ -54,7 +52,6 @@ export function greedy(distance, spacers) {
 
 	for (let i = sortedSpacers.length - 1; i >= 0; i--) {
 		while (sortedSpacers[i].length < distance) {
-			console.log("distance is " + distance);
 			distance -= sortedSpacers[i].length;
 			sortedSpacers[i].quantity++;
 		}
